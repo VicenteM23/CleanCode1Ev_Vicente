@@ -19,9 +19,10 @@ public class EjemploCodigoLimpio3 {
         Scanner scan = new Scanner(System.in);
         final int Oportunidades = 5;
         String introducidoString;
-        int aleatorio = (int)(Math.random()*101);
+        int aleatorio = (int)(Math.random()*101); //Operación para calcular numero aleatorio del 0 al 100
         int introducidoInt, intentos = 0;
         System.out.println("Esto es un juego en el que tienes que adivinar qué numero del 0 al 100 estoy pensando, para ello tienes 5 oportunidades.");
+          //Función para verificar si el número introducido corresponde con el generado
             do{
                 System.out.printf("%s, Intentos: [%02d] : ","Por favor, introduzca un número del 0 al 100", intentos);
                 introducidoString = scan.nextLine();
@@ -30,11 +31,12 @@ public class EjemploCodigoLimpio3 {
                 intentos++;
             }while( introducidoInt != aleatorio && intentos <= Oportunidades );
             
-        if( introducidoInt == aleatorio ){
-            System.out.println("¡Felicidades! Has adivinado el número");
-        }else{
-            System.out.println("Lo siento, te has quedado sin intentos, el número era : " + aleatorio);
-        }
+          
+            if( introducidoInt == aleatorio ){
+                System.out.println("¡Felicidades! Has adivinado el número");
+            }else{
+                System.out.println("Lo siento, te has quedado sin intentos, el número era : " + aleatorio);
+            }
     }
     
 }
