@@ -23,7 +23,7 @@ public class EjemploCodigoLimpio2 {
         Coordenadas PuntoR = new Coordenadas();
         Coordenadas PuntoO = new Coordenadas();
         
-        //Asignamos Valores
+        
         PuntoP.x=1.1;
         PuntoP.y=2.2;
         
@@ -36,25 +36,25 @@ public class EjemploCodigoLimpio2 {
         PuntoO.x=0;
         PuntoO.y=0;
         
-        //Calculamos la distancia al origen de cada punto:
-        double distanciaPOrigen = Math.sqrt((Math.pow(PuntoP.x, 2))+(Math.pow(PuntoP.y, 2))); //Distancia a origen del punto P
-        double distanciaQOrigen = Math.sqrt((Math.pow(PuntoQ.x, 2))+(Math.pow(PuntoQ.y, 2))); //Distancia a origen del punto Q
-        double distanciaROrigen = Math.sqrt((Math.pow(PuntoR.x, 2))+(Math.pow(PuntoR.y, 2))); //Distancia a origen del punto R
+        //Operaciones para calcular la distancia entre puntos y origen:
+        double distanciaPOrigen = Math.sqrt((Math.pow(PuntoP.x, 2))+(Math.pow(PuntoP.y, 2)));
+        double distanciaQOrigen = Math.sqrt((Math.pow(PuntoQ.x, 2))+(Math.pow(PuntoQ.y, 2)));
+        double distanciaROrigen = Math.sqrt((Math.pow(PuntoR.x, 2))+(Math.pow(PuntoR.y, 2)));
         
-        //Imprimimos por pantalla con formato los resultados de cada punto:
+        
         System.out.printf("Distancia desde PuntoP (%1.1f:%1.1f) al Punto de Origen (%1.1f:%1.1f) = %1.3f\n", PuntoP.x , PuntoP.y , PuntoO.x , PuntoO.y , distanciaPOrigen);
         System.out.printf("Distancia desde PuntoQ (%1.1f:%1.1f) al Punto de Origen (%1.1f:%1.1f) = %1.3f\n", PuntoQ.x , PuntoQ.y , PuntoO.x , PuntoO.y , distanciaQOrigen);
         System.out.printf("Distancia desde PuntoR (%1.1f:%1.1f) al Punto de Origen (%1.1f:%1.1f) = %1.3f\n", PuntoR.x , PuntoR.y , PuntoO.x , PuntoO.y , distanciaROrigen);
         
-        //Hacemos la operación para obtener la distancia entre los puntos P y Q:
+        //Operación para calcular la distancia entre los puntos P y Q:
         double resultadoPQ = Math.sqrt((Math.pow((PuntoP.x-PuntoQ.x),2 ) + Math.pow((PuntoP.y-PuntoQ.y),2 )));
         System.out.printf("La distancia entre PuntoP: (%1.1f:%1.1f)y PuntoQ: (%1.1f:%1.1f) es : %02.5f\n", PuntoP.x , PuntoP.y ,PuntoQ.x , PuntoQ.y , resultadoPQ);
         
-        //Hacemos la operación para obtener la distancia entre los puntos P y R:
+        //Operación para calcular la distancia entre los puntos P y R:
         double resultadoPR = Math.sqrt((Math.pow((PuntoP.x-PuntoR.x),2 ) + Math.pow((PuntoP.y-PuntoR.y),2 )));
         System.out.printf("La distancia entre PuntoP: (%1.1f:%1.1f)y PuntoR: (%1.1f:%1.1f) es : %02.5f\n", PuntoP.x , PuntoP.y ,PuntoR.x , PuntoR.y , resultadoPR);
         
-        //Hacemos la operación para obtener la distancia entre los puntos R y Q:
+        //Operación para calcular la distancia entre los puntos R y Q:
         double resultadoRQ = Math.sqrt((Math.pow((PuntoR.x-PuntoQ.x),2 ) + Math.pow((PuntoR.y-PuntoQ.y),2 )));
         System.out.printf("La distancia entre PuntoP: (%1.1f:%1.1f)y PuntoQ: (%1.1f:%1.1f) es : %02.5f\n", PuntoR.x , PuntoR.y ,PuntoQ.x , PuntoQ.y , resultadoRQ);
         
